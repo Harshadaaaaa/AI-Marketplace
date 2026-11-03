@@ -1,40 +1,70 @@
-# Environment variables / secrets
+# ─────────────────────────────
+# OS & editor files
+# ─────────────────────────────
+.DS_Store
+Thumbs.db
+ehthumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ─────────────────────────────
+# Secrets — never commit these
+# ─────────────────────────────
 .env
 .env.*
 !.env.example
+*.pem
+credentials.json
 
-# Node.js
+# ─────────────────────────────
+# Node
+# ─────────────────────────────
 node_modules/
 npm-debug.log*
-yarn-debug.log*
-pnpm-debug.log*
-
-# Python
-__pycache__/
-*.py[cod]
-.venv/
-venv/
-env/
-
-# macOS
-.DS_Store
-__MACOSX/
-
-# Windows
-Thumbs.db
-desktop.ini
-
-# Logs
-*.log
-
-# IDE / editor
-.vscode/
-.idea/
-
-# Build / generated files
+yarn-error.log
+yarn-debug.log
 dist/
 build/
+.next/
 coverage/
 
-# Docker
-*.pid
+# Lock files are intentionally NOT ignored: this is an application, so builds
+# should be reproducible.
+
+# ─────────────────────────────
+# Python
+# ─────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.venv/
+.pytest_cache/
+
+# ─────────────────────────────
+# Logs & local databases
+# ─────────────────────────────
+*.log
+*.sqlite3
+*.db
+
+
+# Claude Code local configuration
+.claude/
+CLAUDE.local.md
+
+# Local database backups (may contain private user data)
+/backups/
+
+docker-compose.yml.backup-*
+
+# Android / Gradle generated files and local credentials
+.gradle/
+.kotlin/
+**/local.properties
+*.jks
+*.keystore
+google-services.json
