@@ -1,0 +1,11 @@
+/*
+  App-level styles.
+  The Vite starter boilerplate that previously lived here (fixed 1126px #root,
+  centered text, demo hero/next-steps rules) was removed because it conflicted
+  with the app's Tailwind layout. Global tokens and base styles live in index.css.
+*/
+
+#root {
+  min-height: 100vh;
+  isolation: isolate;
+}
